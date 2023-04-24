@@ -8,6 +8,7 @@ import {
   Delete,
   HttpStatus,
   HttpException,
+  Request,
   Res,
   UseGuards,
 } from '@nestjs/common';
@@ -64,8 +65,8 @@ export class ResponseFormController {
   @ApiNotFoundResponse({ description: 'No response found' })
   @ApiOkResponse({ description: 'responses fetched successfully!' })
   @ApiBearerAuth()
-  async findAll(@Res() response) {
-    const responseForms = await this.responseFormService.findAll();
+  async findAll(@Res() response, @Request() req) {
+    const responseForms = await this.responseFormService.findAll(req);
     if (!responseForms || responseForms.length === 0) {
       throw new HttpException('No response found', HttpStatus.NOT_FOUND);
     }

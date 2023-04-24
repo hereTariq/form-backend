@@ -9,15 +9,12 @@ import { Model } from 'mongoose';
 export class FormService {
   constructor(@InjectModel(Form.name) private formModel: Model<Form>) {}
   async create(createFormDto: CreateFormDto) {
-    console.log({ createFormDto });
-
     const form = await this.formModel.create(createFormDto);
-    console.log({ form });
     return form;
   }
 
-  async findAll() {
-    const forms = await this.formModel.find();
+  async findAll(req: any) {
+    const forms = await this.formModel.find({ userId: req.user.sub });
     if (forms.length == 0) {
       return null;
     }

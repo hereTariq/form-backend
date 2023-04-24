@@ -18,8 +18,10 @@ export class ResponseFormService {
     return responseForm;
   }
 
-  async findAll() {
-    const responseForm = await this.responseFormModel.find();
+  async findAll(req: any) {
+    const responseForm = await this.responseFormModel.find({
+      userId: req.user.sub,
+    });
     if (responseForm.length == 0) {
       return null;
     }
