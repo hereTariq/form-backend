@@ -24,8 +24,8 @@ import {
   ApiOkResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { Form } from 'src/Schemas/form.schema';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { Form } from '../Schemas/form.schema';
+import { AuthGuard } from '../auth/auth.guard';
 import { response } from 'express';
 @ApiTags('Form')
 @Controller('form')

@@ -14,8 +14,8 @@ import {
 import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from 'src/Schemas/user.schema';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { User } from '../Schemas/user.schema';
+import { AuthGuard } from '../auth/auth.guard';
 import {
   ApiBadRequestResponse,
   ApiBearerAuth,

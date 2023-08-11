@@ -16,7 +16,7 @@ import { ResponseFormService } from './response-form.service';
 import { CreateResponseFormDto } from './dto/create-response-form.dto';
 import { UpdateResponseFormDto } from './dto/update-response-form.dto';
 import { response } from 'express';
-import { AuthGuard } from 'src/auth/auth.guard';
+import { AuthGuard } from '../auth/auth.guard';
 import {
   ApiBadRequestResponse,
   ApiBearerAuth,
@@ -26,7 +26,7 @@ import {
   ApiOkResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { ResponseForm } from 'src/Schemas/response.schema';
+import { ResponseForm } from '../Schemas/response.schema';
 @ApiTags('Response')
 @Controller('response-form')
 export class ResponseFormController {

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateResponseFormDto } from './dto/create-response-form.dto';
 import { UpdateResponseFormDto } from './dto/update-response-form.dto';
-import { ResponseForm } from 'src/Schemas/response.schema';
+import { ResponseForm } from '../Schemas/response.schema';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 

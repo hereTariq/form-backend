@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateFormDto } from './dto/create-form.dto';
 import { UpdateFormDto } from './dto/update-form.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import { Form } from 'src/Schemas/form.schema';
+import { Form } from '../Schemas/form.schema';
 import { Model } from 'mongoose';
 
 @Injectable()

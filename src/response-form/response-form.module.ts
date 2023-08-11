@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ResponseFormService } from './response-form.service';
 import { ResponseFormController } from './response-form.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ResponseForm, ResponseFormSchema } from 'src/Schemas/response.schema';
+import { ResponseForm, ResponseFormSchema } from '../Schemas/response.schema';
 
 @Module({
   imports: [
