@@ -5,7 +5,7 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.enableCors();
+  app.enableCors({ origin: 'https://react-google-form.netlify.app' });
   const config = new DocumentBuilder()
     .setTitle('Google forms example')
     .setDescription('The google form API description')
