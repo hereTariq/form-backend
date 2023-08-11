@@ -11,7 +11,7 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot(),
-    MongooseModule.forRoot(process.env.MONGO_URI, { dbName: 'google-form' }),
+    MongooseModule.forRoot(process.env.URI, { dbName: 'google-form' }),
     UserModule,
     FormModule,
     AuthModule,
