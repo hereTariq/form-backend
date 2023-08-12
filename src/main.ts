@@ -6,10 +6,9 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors({
-    origin: 'https://react-google-form.netlify.app',
-    methods: ['GET,PUT,POST,DELETE,UPDATE,OPTIONS', 'PATCH'],
-    allowedHeaders:
-      'X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept, Observe',
+    origin: 'http://localhost:3001',
+    methods: ['GET,PUT,POST,DELETE,UPDATE,OPTIONS,PATCH'],
+
     credentials: true,
   });
   const config = new DocumentBuilder()
